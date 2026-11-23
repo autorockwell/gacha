@@ -1,45 +1,123 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <style>
-    :root {
-      --bg: #f7f7f5;
-      --fg: #1a1a1a;
-      --accent: #2563eb;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg: #111214; --fg: #f2f2f2; --accent: #60a5fa; }
-    }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: var(--bg);
-      color: var(--fg);
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      text-align: center;
-      padding: 16px;
-    }
-    h1 {
-      font-size: clamp(2.5rem, 8vw, 5rem);
-      margin: 0 0 0.25em;
-      color: var(--accent);
-    }
-    p {
-      font-size: 1.1rem;
-      opacity: 0.8;
-      margin: 0;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Which Creepy-Crawly Are You?</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <p>Testing change and deployment</p>
+  
+  <div class="lava-container">
+  <div class="lava-blob blob1"></div>
+  <div class="lava-blob blob2"></div>
+  <div class="lava-blob blob3"></div>
+  <div class="lava-blob blob4"></div>
+  </div>
+
+  <main class="container">
+
+    <header>
+      <p class="brand">mixed feelings - THE CREEPY-CRAWLY QUIZ</p>
+    </header>
+
+    <section id="welcome" class="screen active">
+      <h1>Crawl, don't run...</h1>
+      <p class="description">
+        To discover who you truly are.
+      </p>
+
+      <input
+        id="username"
+        type="text"
+        placeholder="What shall we call you?"
+        maxlength="30"
+      >
+
+      <button id="startBtn">Start</button>
+
+       <footer>
+          Created by @animatikat.
+       </footer>
+
+
+    </section>
+
+
+<!-- lore 1 -->
+<section id="lore1" class="screen lore-screen">
+
+  <div class="lore-content">
+    <p id="loreText1"></p>
+  </div>
+
+  <button id="loreNext1" disabled>Next →</button>
+
+</section>
+
+
+<!-- lore 2 -->
+<section id="lore2" class="screen lore-screen">
+
+  <div class="lore-content">
+    <p id="loreText2"></p>
+  </div>
+
+  <button id="loreNext2" disabled>Next →</button>
+
+</section>
+
+
+    <section id="story" class="screen">
+
+    <div class="question-text-box">
+       <p id="questionNumber" class="muted"></p>
+       <h2 id="storyTitle"></h2>
+       <p id="storyText" class="story-text"></p>
+    </div>
+
+    <div class="question-graphic">
+       <img id="questionGif" src="" alt="Question illustration">
+    </div>
+
+    <div id="answers" class="answers"></div>
+
+      <div class="question-navigation">
+        <button id="backBtn" class="secondary">← Back</button>
+        <button id="nextBtn" disabled>Next →</button>
+       </div>
+
+     </section>
+
+    <!-- cut -->
+<section id="lore3" class="screen lore-screen">
+
+  <div class="lore-content">
+    <p id="loreText3"></p>
+  </div>
+
+  <button id="loreNext3" disabled>Next →</button>
+
+</section>
+
+    <section id="result" class="screen">
+      <h1 id="resultTitle"></h1>
+      <p id="resultDescription"></p>
+
+      <div class="result-card">
+        <p>YOUR TRUE VESSEL</p>
+        <h2 id="resultType"></h2>
+        <p id="resultDetails"></p>
+      </div>
+      <button id="downloadBtn">Collect your talisman.</button>
+      <button id="restartBtn">Once more!</button>
+    </section>
+
+  </main>
+
+  <div id="fadeOverlay"></div>
+
 </body>
 </html>
