@@ -358,7 +358,12 @@ function showScreen(screen) {
   });
 
   screen.classList.add("active");
-  screen.style.display = "flex";
+
+  if (screen.id === "story") {
+    screen.style.display = "grid";
+  } else {
+    screen.style.display = "flex";
+  }
 }
 
 document.getElementById("startBtn").addEventListener("click", () => {
