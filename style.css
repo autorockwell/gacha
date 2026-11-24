@@ -241,8 +241,8 @@ button:disabled {
   width: 180px;
   align-self: center;
   margin-bottom: 12px;
-  opacity: 0.5;
-  cursor: not-allowed;
+  opacity: 1;
+  cursor: pointer;
 }
 
 #restartBtn {
@@ -869,4 +869,108 @@ body:has(#lore3.active) .lava-container {
   padding: 12px 8px;
   font-size: 13px;
 }
+}
+
+/* RESULTS SCREEN */
+
+.result-screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  gap: 20px;
+}
+
+.result-screen.active {
+  display: flex;
+}
+
+.result-screen h1 {
+  font-size: 32px;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.result-gif-container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-gif-container img {
+  display: block;
+  width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 600px) {
+  .result-screen h1 {
+    font-size: 23px;
+  }
+
+  .result-gif-container {
+    width: 100%;
+  }
+
+  .result-gif-container img {
+    max-height: 55vh;
+  }
+}
+
+#resultTitle {
+  text-align: center;
+  width: 100%;
+}
+
+/* SOUL EXCHANGED STATE */
+#downloadBtn.exchanged {
+  background-color: #073c43;
+  color: #d5ede2;
+  border-color: #55b8a7;
+  opacity: 1;
+  cursor: default;
+  box-shadow: none;
+
+  animation: soulExchange 2.5s ease forwards;
+}
+
+@keyframes soulExchange {
+  0% {
+    background-color: #5c1717;
+    border-color: #a34b4b;
+    color: #f5dada;
+    box-shadow: 0 0 12px rgba(163, 75, 75, 0.35);
+  }
+
+  100% {
+    background-color: #073c43;
+    border-color: #55b8a7;
+    color: #d5ede2;
+    box-shadow: none;
+  }
+}
+
+/* MOBILE LORE SCREEN POSITIONING */
+@media screen and (max-width: 600px) {
+
+  .lore-screen {
+    min-height: 100vh;
+    justify-content: flex-start;
+    padding-top: 18vh;
+  }
+
+  .lore-content {
+    margin: 0;
+    min-height: 180px;
+  }
+
+  .lore-screen button {
+    bottom: 110px;
+  }
+
 }
