@@ -69,27 +69,46 @@
 
 </section>
 
+<section id="story" class="screen cinematic-screen">
 
-    <section id="story" class="screen">
+  <!-- TOP BLACK BAR: QUESTION TEXT -->
+  <div class="cinema-top">
 
     <div class="question-text-box">
-       <p id="questionNumber" class="muted"></p>
-       <h2 id="storyTitle"></h2>
-       <p id="storyText" class="story-text"></p>
+      <p id="questionNumber" class="muted"></p>
+      <h2 id="storyTitle"></h2>
+      <p id="storyText" class="story-text"></p>
     </div>
 
-    <div class="question-graphic">
-       <img id="questionGif" src="" alt="Question illustration">
-    </div>
+  </div>
+
+
+  <!-- MIDDLE: ANIMATION -->
+  <div class="cinema-frame">
+
+    <img
+      id="questionGif"
+      src=""
+      alt="Question illustration"
+    >
+
+  </div>
+
+
+  <!-- BOTTOM BLACK BAR: ANSWERS + NAVIGATION -->
+  <div class="cinema-bottom">
 
     <div id="answers" class="answers"></div>
 
-      <div class="question-navigation">
-        <button id="backBtn" class="secondary">← Back</button>
-        <button id="nextBtn" disabled>Next →</button>
-       </div>
+    <div class="question-navigation">
+      <button id="backBtn" class="secondary">← Back</button>
+      <button id="nextBtn" disabled>Next →</button>
+    </div>
 
-     </section>
+  </div>
+
+</section>
+
 
     <!-- cut -->
 <section id="lore3" class="screen lore-screen">
@@ -102,15 +121,13 @@
 
 </section>
 
-    <section id="result" class="screen">
+    <section id="result" class="screen result-screen">
       <h1 id="resultTitle"></h1>
-      <p id="resultDescription"></p>
 
-      <div class="result-card">
-        <p>YOUR TRUE VESSEL</p>
-        <h2 id="resultType"></h2>
-        <p id="resultDetails"></p>
+      <div class="result-gif-container">
+         <img id="resultGif" src="" alt="Your reincarnation">
       </div>
+
       <button id="downloadBtn">Collect your talisman.</button>
       <button id="restartBtn">Once more!</button>
     </section>

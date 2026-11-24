@@ -1,255 +1,284 @@
 
 const questions = [
+  // AXIS 1: A vs. B
   {
+    axis: 0,
     gif: "assets/Desert_Planet.GIF",
-    story: `You spawn into a desert planet. Everything looks beige and endless under the weak sun.
-
-Oh well, it's been an okay li—
-
-Wait! You see two flickers off in the distance. You decide to...`,
+    story: `You spawn into a desert planet. Everything looks beige and endless under the weak sun. Oh well, it's been an okay li — Wait! You see two flickers off in the distance. You decide to...`,
     answers: [
       {
         text: "Go left. The light you see blinks almost frantically. Maybe it needs help.",
-        type: "golden"
+        trait: "A"
       },
       {
         text: "Go right. The light you see pulses like a steady heartbeat. Maybe it could help you.",
-        type: "wild"
+        trait: "B"
       }
     ]
   },
   {
+    axis: 0,
     gif: "assets/Two_Creatures.GIF",
-    story: `It's just your luck! You've come across an oasis.
-
-The creatures at this watering hole are strange. Something licks the back of your knee. No one licks the back of your knee (for free).
-
-You look down in indignation at...`,
+    story: `It's just your luck! You've come across an oasis. The creatures at this watering hole are strange. Something licks the back of your knee. No one licks the back of your knee (for free). You look down in indignation at...`,
     answers: [
       {
         text: "A ze-brah. What a chill little freak.",
-        type: "golden"
+        trait: "B"
       },
       {
         text: "A frock-odile. They look comfortable and sensible.",
-        type: "wild"
+        trait: "A"
       }
     ]
   },
   {
+    axis: 0,
     gif: "assets/Cranes.GIF",
-    story: `A flock of cranes rushes behind you, dunking you into the water.
-
-In another twist of fate, you seem to have fallen through a wormhole.
-
-Your bag slips out of your hands, and you can only save one item on your descent. You reach for...`,
+    story: `A flock of cranes rushes behind you, dunking you into the water. In another twist of fate, you seem to have fallen through a wormhole. Your bag slips out of your hands, and you can only save one item on your descent. You reach for...`,
     answers: [
       {
         text: "<em>Falling Through Wormholes for Dummies Vol. VII.</em> And to think you almost packed Proust.",
-        type: "mysterious"
+        trait: "A"
       },
       {
         text: "That flattened protein bar you refuse to throw out. Can't think on an empty stomach.",
-        type: "wild"
+        trait: "B"
       }
     ]
   },
+
+  // AXIS 2: C vs. D
   {
+    axis: 1,
     gif: "assets/Meadow.GIF",
-    story: `You land in a meadow. It's just like the laundry detergent commercials.
-
-The birds are singing, the clouds are billowing, the flowers are blooming.
-
-But you can't tune out the yelling of two very angry gnomes. You walk over to them...`,
+    story: `You land in a meadow. It's just like the laundry detergent commercials. The birds are singing, the clouds are billowing, the flowers are blooming. But you can't tune out the yelling of two very angry gnomes. You walk over to them...`,
     answers: [
       {
         text: "Confident in your mediation skills. All will be well in the shire.",
-        type: "wild"
+        trait: "D"
       },
       {
         text: "Curious about their conflict. How could paradise be so troubled?",
-        type: "golden"
+        trait: "C"
       }
     ]
   },
   {
+    axis: 1,
     gif: "assets/Swords.GIF",
-    story: `It's been three hours. Gnomian politics are more complicated than you could have ever imagined, but most problems seem to derive from the dark overlord GNOME-STOMPER.
-
-Your companions inform you that the ruthless tyrant reaps the lands of their grain, controls the railways, and — among other things — stomps gnomes.
-
-They offer you their armory, and you choose to wield...`,
+    story: `It's been three hours. Gnomian politics are more complicated than you could have ever imagined, but most problems seem to derive from the dark overlord GNOME-STOMPER. Your companions inform you that the ruthless tyrant reaps the lands of their grain, controls the railways, and — among other things — stomps gnomes. They offer you their armory, and you choose to wield...`,
     answers: [
       {
         text: "Smingle, the trusty garden hoe. It's protected this meadow for generations",
-        type: "dreamer"
+        trait: "C"
       },
       {
         text: "GNOME-STOMPER-STOMPER, an experimental instrument that harnesses the power of nuclear fusion. It might just work.",
-        type: "wild"
+        trait: "D"
       }
     ]
   },
   {
+    axis: 1,
     gif: "assets/Faire.GIF",
-    story: `You're on your merry way when your stomach starts rumbling. 
-
-You take a detour to the nearby faire. It all smells so good, but you opt for...`,
+    story: `You're on your merry way when your stomach starts rumbling. You take a detour to the nearby faire. It all smells so good, but you opt for...`,
     answers: [
       {
         text: "The triple-fried butter kraken. You hear from the faire-goer behind you that they're about to be acquired by private equity. You came just in time.",
-        type: "dreamer"
+        trait: "D"
       },
       {
         text: "The homunculus's cure. Cure's are good, right? Right?",
-        type: "wild"
+        trait: "C"
       }
     ]
   },
+
+  // AXIS 3: E vs. F
   {
+    axis: 2,
     gif: "assets/Lair.GIF",
     story: `The volcanic lair is not very accessible. To make the rest of the way you...`,
     answers: [
       {
         text: "Grit your teeth and bear through it. Shortcuts have consequences.",
-        type: "dreamer"
+        trait: "E"
       },
       {
         text: "Fashion a vehicle out of your provisions. The supplies have to be used somehow.",
-        type: "wild"
+        trait: "F"
       }
     ]
-  }, 
+  },
   {
+    axis: 2,
     gif: "assets/Eyes.GIF",
-    story: `Heavy is the door to this wretched den.
-    
-    Suspicious eyes peer at you through a slit. They demand to know who you are. 
-    
-    You introduce yourself as...`,
+    story: `Heavy is the door to this wretched den. Suspicious eyes peer at you through a slit. They demand to know who you are. You introduce yourself as...`,
     answers: [
       {
         text: "An aspiring henchman. You've been interested in evil from a very young age.",
-        type: "dreamer"
+        trait: "E"
       },
       {
         text: "The jester. You're here for the three o'clock?",
-        type: "wild"
+        trait: "F"
       }
     ]
-  }, 
+  },
   {
+    axis: 2,
     gif: "assets/Souvenir.GIF",
-    story: `By George! That worked.
-    
-    The austere halls are lifeless. But, souvenirs or it didn't happen.
-    
-    A comfortable guy like GNOME-STOMPER surely wouldn't miss...`,
+    story: `By George! That worked. The austere halls are lifeless. But, souvenirs or it didn't happen. A comfortable guy like GNOME-STOMPER surely wouldn't miss...`,
     answers: [
       {
         text: "A hemorrhoid relief potion. Who leaves that out?",
-        type: "dreamer"
+        trait: "E"
       },
       {
         text: "A shed phoenix claw. Seems like a fire hazard.",
-        type: "wild"
+        trait: "F"
       }
     ]
-  }, 
+  },
+
+  // AXIS 4: G vs. H
   {
+    axis: 3,
     gif: "assets/GS.GIF",
-    story: `Fuuuuu — 
-    
-    You've been caught stealing by the master of the house himself!
-    
-    You attempt to de-escalate by...`,
+    story: `Fuuuuu — You've been caught stealing by the master of the house himself! You attempt to de-escalate by...`,
     answers: [
       {
         text: "Flirting with him. Is that a wand in his robes, or is he just happy to see you ;)",
-        type: "dreamer"
+        trait: "G"
       },
       {
         text: "Gaslighting him. You're imagining things, Big G, you must be tired...",
-        type: "wild"
+        trait: "H"
       }
     ]
-  }, 
+  },
   {
+    axis: 3,
     gif: "assets/Fight.GIF",
-    story: `He threatens to stomp you like a gnome!
-    
-    You take your trusty blade and swing at...`,
+    story: `He threatens to stomp you like a gnome! You take your trusty blade and swing at...`,
     answers: [
       {
         text: "His head. Let's end this once and for all.",
-        type: "dreamer"
+        trait: "H"
       },
       {
         text: "His legs. It would be <em>soooo</em> embarrassing if he tripped right now.",
-        type: "wild"
+        trait: "G"
       }
     ]
-  }, 
+  },
   {
+    axis: 3,
     gif: "assets/Dance.GIF",
-    story: `No! GNOME-STOMPER's sick moves overwhelm you.
-    
-    With gasping breath you say...`,
+    story: `No! GNOME-STOMPER's sick moves overwhelm you. With gasping breath you say...`,
     answers: [
       {
         text: "Rosebud...",
-        type: "dreamer"
+        trait: "G"
       },
       {
         text: "I'll be back...",
-        type: "wild"
+        trait: "H"
       }
     ]
   }
 ];
 
+
+// PERSONALITY PROFILES
+
 const personalities = {
-  golden: {
-    name: "Mittens the Kitten",
-    subtitle: "The Crepuscular Creeper",
-    description: "TKTK",
-    details: "TKTK"
+  crawl: {
+    gif: "assets/crawl.gif"
   },
 
-  wild: {
-    name: "Mittens the Kitten",
-    subtitle: "The Crepuscular Creeper",
-    description: "TKTK",
-    details: "TKTK"
+  hop: {
+    gif: "assets/hop.gif"
   },
 
-  mysterious: {
-    name: "Mittens the Kitten",
-    subtitle: "The Crepuscular Creeper",
-    description: "TKTK",
-    details: "TKTK"
+  tiptoe: {
+    gif: "assets/tiptoe.gif"
   },
 
-  dreamer: {
-    name: "Mittens the Kitten",
-    subtitle: "The Crepuscular Creeper",
-    description: "TKTK",
-    details: "TKTK"
+  run: {
+    gif: "assets/run.gif"
+  },
+
+  fly: {
+    gif: "assets/fly.gif"
+  },
+
+  swim: {
+    gif: "assets/swim.gif"
+  },
+
+  slither: {
+    gif: "assets/slither.gif"
+  },
+
+  drag: {
+    gif: "assets/drag.gif"
+  },
+
+  inch: {
+    gif: "assets/inch.gif"
+  },
+
+  stalk: {
+    gif: "assets/stalk.gif"
   }
 };
+
+
+// MAP THE 16 COMBINATIONS TO THE 10 PERSONALITY TYPES
+
+const personalityMap = {
+  "ACEG": "crawl",
+  "ACEH": "crawl",
+  "ACFG": "crawl",
+
+  "ACFH": "hop",
+  "ADEG": "hop",
+  "ADEH": "hop",
+
+  "ADFG": "tiptoe",
+  "ADFH": "tiptoe",
+
+  "BCEG": "run",
+  "BCEH": "run",
+
+  "BCFG": "fly",
+  "BCFH": "swim",
+
+  "BDEG": "slither",
+  "BDEH": "drag",
+
+  "BDFG": "inch",
+  "BDFH": "stalk"
+};
+
+
+// MARKER GROUPS
+
+const markerGroups = [
+  { left: "A", right: "B" },
+  { left: "C", right: "D" },
+  { left: "E", right: "F" },
+  { left: "G", right: "H" }
+];
+
 
 let playerName = "";
 let currentQuestion = 0;
 let selectedAnswers = [];
-let scores = {
-  golden: 0,
-  wild: 0,
-  mysterious: 0,
-  dreamer: 0
-};
 
 
-// lore
+// LORE
 
 const lore1 = `After years of searching, you've finally found it.
 
@@ -268,7 +297,7 @@ But this vessel will no longer serve you.
 Your transformation is nearly complete.`;
 
 
-// typing
+// TYPING
 
 let typingInterval;
 
@@ -280,7 +309,6 @@ function typeText(element, text, button) {
   button.disabled = true;
   button.classList.remove("visible");
 
-  // Put the HTML into a temporary container
   const temp = document.createElement("div");
   temp.innerHTML = text;
 
@@ -288,10 +316,6 @@ function typeText(element, text, button) {
   let index = 0;
 
   typingInterval = setInterval(() => {
-    // Reveal the text progressively
-    const visibleText = fullText.substring(0, index + 1);
-
-    // format
     let remaining = index + 1;
     element.innerHTML = "";
 
@@ -329,6 +353,8 @@ function typeText(element, text, button) {
 }
 
 
+// SCREEN ELEMENTS
+
 const welcome = document.getElementById("welcome");
 const story = document.getElementById("story");
 const result = document.getElementById("result");
@@ -336,14 +362,11 @@ const result = document.getElementById("result");
 const fadeOverlay = document.getElementById("fadeOverlay");
 
 function fadeTransition(callback) {
-  // fade
   fadeOverlay.classList.add("active");
 
   setTimeout(() => {
-    // Change screens while black
     callback();
 
-    // restore
     setTimeout(() => {
       fadeOverlay.classList.remove("active");
     }, 300);
@@ -358,8 +381,16 @@ function showScreen(screen) {
   });
 
   screen.classList.add("active");
-  screen.style.display = "flex";
+
+  if (screen.id === "story") {
+    screen.style.display = "grid";
+  } else {
+    screen.style.display = "flex";
+  }
 }
+
+
+// START QUIZ
 
 document.getElementById("startBtn").addEventListener("click", () => {
   const name = document.getElementById("username").value.trim();
@@ -373,32 +404,28 @@ document.getElementById("startBtn").addEventListener("click", () => {
   currentQuestion = 0;
   selectedAnswers = [];
 
-  scores = {
-    golden: 0,
-    wild: 0,
-    mysterious: 0,
-    dreamer: 0
-  };
-
   showScreen(document.getElementById("lore1"));
 
-typeText(
-  document.getElementById("loreText1"),
-  lore1,
-  document.getElementById("loreNext1")
-);
+  typeText(
+    document.getElementById("loreText1"),
+    lore1,
+    document.getElementById("loreNext1")
+  );
 });
+
+
+// RENDER QUESTION
 
 function renderQuestion() {
   const question = questions[currentQuestion];
 
-document.getElementById("questionGif").src = question.gif;
+  document.getElementById("questionGif").src = question.gif;
 
   document.getElementById("questionNumber").textContent =
     `QUESTION ${currentQuestion + 1} / ${questions.length}`;
 
   document.getElementById("storyTitle").textContent =
-    question.title;
+    question.title || "";
 
   document.getElementById("storyText").innerHTML =
     question.story;
@@ -438,6 +465,9 @@ document.getElementById("questionGif").src = question.gif;
     currentQuestion === 0 ? "none" : "block";
 }
 
+
+// NEXT QUESTION
+
 document.getElementById("nextBtn").addEventListener("click", () => {
   if (selectedAnswers[currentQuestion] === undefined) return;
 
@@ -445,7 +475,6 @@ document.getElementById("nextBtn").addEventListener("click", () => {
     currentQuestion++;
     renderQuestion();
   } else {
-
     fadeTransition(() => {
       showScreen(document.getElementById("lore3"));
 
@@ -455,9 +484,11 @@ document.getElementById("nextBtn").addEventListener("click", () => {
         document.getElementById("loreNext3")
       );
     });
-
   }
 });
+
+
+// PREVIOUS QUESTION
 
 document.getElementById("backBtn").addEventListener("click", () => {
   if (currentQuestion > 0) {
@@ -466,41 +497,68 @@ document.getElementById("backBtn").addEventListener("click", () => {
   }
 });
 
+
+// CALCULATE PERSONALITY RESULT
+
 function calculateResult() {
-  scores = {
-    golden: 0,
-    wild: 0,
-    mysterious: 0,
-    dreamer: 0
+
+  // Make sure all 12 questions have been answered.
+  if (selectedAnswers.length !== questions.length ||
+      selectedAnswers.some(answer => answer === undefined)) {
+    console.error("Not all questions have been answered.");
+    return;
+  }
+
+  // Count the points for all eight letters.
+  const markerScores = {
+    A: 0,
+    B: 0,
+    C: 0,
+    D: 0,
+    E: 0,
+    F: 0,
+    G: 0,
+    H: 0
   };
 
   selectedAnswers.forEach((answerIndex, questionIndex) => {
-    const type = questions[questionIndex].answers[answerIndex].type;
-    scores[type]++;
+    const selectedAnswer =
+      questions[questionIndex].answers[answerIndex];
+
+    markerScores[selectedAnswer.trait]++;
   });
 
-  const winningType = Object.keys(scores).reduce((a, b) =>
-    scores[a] >= scores[b] ? a : b
-  );
+  // Find the winning letter for each of the four axes.
+  const personalityCode = markerGroups.map(group => {
+    return markerScores[group.left] > markerScores[group.right]
+      ? group.left
+      : group.right;
+  }).join("");
 
+  // Look up the corresponding personality type.
+  const winningType = personalityMap[personalityCode];
   const personality = personalities[winningType];
 
+  if (!personality) {
+    console.error("No personality found for code:", personalityCode);
+    return;
+  }
+
   document.getElementById("resultTitle").textContent =
-    `${playerName}, your reincarnation is here.`;
+  `${playerName}, your reincarnation is here.`;
 
-  document.getElementById("resultDescription").textContent =
-    personality.description;
-
-  document.getElementById("resultType").textContent =
-    personality.name;
-
-  document.getElementById("resultDetails").textContent =
-    personality.details;
+  document.getElementById("resultGif").src = personality.gif;
 
   showScreen(result);
+
+  // Helpful debugging information in the browser console.
+  console.log("Marker scores:", markerScores);
+  console.log("Personality code:", personalityCode);
+  console.log("Personality type:", winningType);
 }
 
-// restart
+
+// RESTART
 
 document.getElementById("restartBtn").addEventListener("click", () => {
   selectedAnswers = [];
@@ -509,11 +567,37 @@ document.getElementById("restartBtn").addEventListener("click", () => {
   showScreen(welcome);
 });
 
+// DOWNLOAD TALISMAN
 
-// lore 1 to 2
+document.getElementById("downloadBtn").addEventListener("click", () => {
+  const gif = document.getElementById("resultGif");
+
+  const safeName = playerName
+    .trim()
+    .replace(/[^a-z0-9]/gi, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "")
+    .toLowerCase();
+
+  const link = document.createElement("a");
+  link.href = gif.src;
+  link.download = `${safeName || "player"}-talisman.gif`;
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  const button = document.getElementById("downloadBtn");
+
+  button.textContent = "Soul exchanged!";
+  button.classList.add("exchanged");
+  button.disabled = true;
+  
+});
+
+// LORE 1 TO LORE 2
 
 document.getElementById("loreNext1").addEventListener("click", () => {
-
   showScreen(document.getElementById("lore2"));
 
   typeText(
@@ -521,27 +605,23 @@ document.getElementById("loreNext1").addEventListener("click", () => {
     lore2,
     document.getElementById("loreNext2")
   );
-
 });
 
 
-// lore 2 to quiz
+// LORE 2 TO QUIZ
 
 document.getElementById("loreNext2").addEventListener("click", () => {
-
   clearInterval(typingInterval);
 
   showScreen(story);
   renderQuestion();
-
 });
 
-// lore 3 to result
+
+// LORE 3 TO RESULT
 
 document.getElementById("loreNext3").addEventListener("click", () => {
-
   clearInterval(typingInterval);
 
   calculateResult();
-
 });
