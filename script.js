@@ -2,11 +2,7 @@
 const questions = [
   {
     gif: "assets/Desert_Planet.GIF",
-    story: `You spawn into a desert planet. Everything looks beige and endless under the weak sun.
-
-Oh well, it's been an okay li—
-
-Wait! You see two flickers off in the distance. You decide to...`,
+    story: `You spawn into a desert planet. Everything looks beige and endless under the weak sun. Oh well, it's been an okay li — Wait! You see two flickers off in the distance. You decide to...`,
     answers: [
       {
         text: "Go left. The light you see blinks almost frantically. Maybe it needs help.",
@@ -20,11 +16,7 @@ Wait! You see two flickers off in the distance. You decide to...`,
   },
   {
     gif: "assets/Two_Creatures.GIF",
-    story: `It's just your luck! You've come across an oasis.
-
-The creatures at this watering hole are strange. Something licks the back of your knee. No one licks the back of your knee (for free).
-
-You look down in indignation at...`,
+    story: `It's just your luck! You've come across an oasis. The creatures at this watering hole are strange. Something licks the back of your knee. No one licks the back of your knee (for free). You look down in indignation at...`,
     answers: [
       {
         text: "A ze-brah. What a chill little freak.",
@@ -38,11 +30,7 @@ You look down in indignation at...`,
   },
   {
     gif: "assets/Cranes.GIF",
-    story: `A flock of cranes rushes behind you, dunking you into the water.
-
-In another twist of fate, you seem to have fallen through a wormhole.
-
-Your bag slips out of your hands, and you can only save one item on your descent. You reach for...`,
+    story: `A flock of cranes rushes behind you, dunking you into the water. In another twist of fate, you seem to have fallen through a wormhole. Your bag slips out of your hands, and you can only save one item on your descent. You reach for...`,
     answers: [
       {
         text: "<em>Falling Through Wormholes for Dummies Vol. VII.</em> And to think you almost packed Proust.",
@@ -56,11 +44,7 @@ Your bag slips out of your hands, and you can only save one item on your descent
   },
   {
     gif: "assets/Meadow.GIF",
-    story: `You land in a meadow. It's just like the laundry detergent commercials.
-
-The birds are singing, the clouds are billowing, the flowers are blooming.
-
-But you can't tune out the yelling of two very angry gnomes. You walk over to them...`,
+    story: `You land in a meadow. It's just like the laundry detergent commercials. The birds are singing, the clouds are billowing, the flowers are blooming. But you can't tune out the yelling of two very angry gnomes. You walk over to them...`,
     answers: [
       {
         text: "Confident in your mediation skills. All will be well in the shire.",
@@ -74,11 +58,7 @@ But you can't tune out the yelling of two very angry gnomes. You walk over to th
   },
   {
     gif: "assets/Swords.GIF",
-    story: `It's been three hours. Gnomian politics are more complicated than you could have ever imagined, but most problems seem to derive from the dark overlord GNOME-STOMPER.
-
-Your companions inform you that the ruthless tyrant reaps the lands of their grain, controls the railways, and — among other things — stomps gnomes.
-
-They offer you their armory, and you choose to wield...`,
+    story: `It's been three hours. Gnomian politics are more complicated than you could have ever imagined, but most problems seem to derive from the dark overlord GNOME-STOMPER. Your companions inform you that the ruthless tyrant reaps the lands of their grain, controls the railways, and — among other things — stomps gnomes. They offer you their armory, and you choose to wield...`,
     answers: [
       {
         text: "Smingle, the trusty garden hoe. It's protected this meadow for generations",
@@ -92,9 +72,7 @@ They offer you their armory, and you choose to wield...`,
   },
   {
     gif: "assets/Faire.GIF",
-    story: `You're on your merry way when your stomach starts rumbling. 
-
-You take a detour to the nearby faire. It all smells so good, but you opt for...`,
+    story: `You're on your merry way when your stomach starts rumbling. You take a detour to the nearby faire. It all smells so good, but you opt for...`,
     answers: [
       {
         text: "The triple-fried butter kraken. You hear from the faire-goer behind you that they're about to be acquired by private equity. You came just in time.",
@@ -122,11 +100,7 @@ You take a detour to the nearby faire. It all smells so good, but you opt for...
   }, 
   {
     gif: "assets/Eyes.GIF",
-    story: `Heavy is the door to this wretched den.
-    
-    Suspicious eyes peer at you through a slit. They demand to know who you are. 
-    
-    You introduce yourself as...`,
+    story: `Heavy is the door to this wretched den. Suspicious eyes peer at you through a slit. They demand to know who you are. You introduce yourself as...`,
     answers: [
       {
         text: "An aspiring henchman. You've been interested in evil from a very young age.",
@@ -140,11 +114,7 @@ You take a detour to the nearby faire. It all smells so good, but you opt for...
   }, 
   {
     gif: "assets/Souvenir.GIF",
-    story: `By George! That worked.
-    
-    The austere halls are lifeless. But, souvenirs or it didn't happen.
-    
-    A comfortable guy like GNOME-STOMPER surely wouldn't miss...`,
+    story: `By George! That worked. The austere halls are lifeless. But, souvenirs or it didn't happen. A comfortable guy like GNOME-STOMPER surely wouldn't miss...`,
     answers: [
       {
         text: "A hemorrhoid relief potion. Who leaves that out?",
@@ -158,11 +128,7 @@ You take a detour to the nearby faire. It all smells so good, but you opt for...
   }, 
   {
     gif: "assets/GS.GIF",
-    story: `Fuuuuu — 
-    
-    You've been caught stealing by the master of the house himself!
-    
-    You attempt to de-escalate by...`,
+    story: `Fuuuuu — You've been caught stealing by the master of the house himself! You attempt to de-escalate by...`,
     answers: [
       {
         text: "Flirting with him. Is that a wand in his robes, or is he just happy to see you ;)",
@@ -176,9 +142,7 @@ You take a detour to the nearby faire. It all smells so good, but you opt for...
   }, 
   {
     gif: "assets/Fight.GIF",
-    story: `He threatens to stomp you like a gnome!
-    
-    You take your trusty blade and swing at...`,
+    story: `He threatens to stomp you like a gnome! You take your trusty blade and swing at...`,
     answers: [
       {
         text: "His head. Let's end this once and for all.",
@@ -192,9 +156,7 @@ You take a detour to the nearby faire. It all smells so good, but you opt for...
   }, 
   {
     gif: "assets/Dance.GIF",
-    story: `No! GNOME-STOMPER's sick moves overwhelm you.
-    
-    With gasping breath you say...`,
+    story: `No! GNOME-STOMPER's sick moves overwhelm you. With gasping breath you say...`,
     answers: [
       {
         text: "Rosebud...",
