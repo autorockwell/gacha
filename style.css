@@ -970,7 +970,7 @@ body:has(#lore3.active) .lava-container {
   }
 
   .lore-screen button {
-    bottom: 110px;
+    bottom: 200px !important;
   }
 
 }
