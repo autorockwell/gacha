@@ -36,6 +36,8 @@
         maxlength="30"
       >
 
+      <p id="nameError" class="name-error"></p>
+
       <button id="startBtn">Start</button>
 
        <footer>
@@ -85,13 +87,14 @@
 
   <!-- MIDDLE: ANIMATION -->
   <div class="cinema-frame">
-
-    <img
-      id="questionGif"
-      src=""
-      alt="Question illustration"
-    >
-
+     <video
+       id="questionVideo"
+       autoplay
+       muted
+       loop
+       playsinline
+       preload="metadata"
+    ></video>
   </div>
 
 

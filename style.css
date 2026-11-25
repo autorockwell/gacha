@@ -118,6 +118,7 @@ h2 {
   width: 100%;
   max-width: 300px;
   text-align: center;
+  margin-bottom: 0;
 }
 
 #welcome button {
@@ -638,7 +639,7 @@ body:has(#lore3.active) .lava-container {
   overflow: hidden;
 }
 
-.cinema-frame img {
+.cinema-frame video {
   display: block;
 
   width: 100%;
@@ -818,7 +819,7 @@ body:has(#lore3.active) .lava-container {
     overflow: hidden;
   }
 
-  .cinema-frame img {
+  .cinema-frame video {
     display: block;
     width: 100%;
     height: 100%;
@@ -973,4 +974,13 @@ body:has(#lore3.active) .lava-container {
     bottom: 200px !important;
   }
 
+}
+
+.name-error {
+  color: #d98b8b;
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 12px;
+  min-height: 18px;
+  margin: 0 0 24px;
+  text-align: center;
 }
