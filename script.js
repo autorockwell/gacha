@@ -80,7 +80,7 @@ const questions = [
   },
   {
     axis: 1,
-    gif: "assets/Faire.GIF",
+    gif: "assets/Faire.gif",
     story: `You're on your merry way when your stomach starts rumbling. You take a detour to the nearby faire. It all smells so good, but you opt for...`,
     answers: [
       {
@@ -97,7 +97,7 @@ const questions = [
   // AXIS 3: E vs. F
   {
     axis: 2,
-    gif: "assets/Lair.GIF",
+    gif: "assets/Lair.gif",
     story: `The volcanic lair is not very accessible. To make the rest of the way you...`,
     answers: [
       {
@@ -127,7 +127,7 @@ const questions = [
   },
   {
     axis: 2,
-    gif: "assets/Souvenir.GIF",
+    gif: "assets/Souvenir.gif",
     story: `By George! That worked. The austere halls are lifeless. But, souvenirs or it didn't happen. A comfortable guy like GNOME-STOMPER surely wouldn't miss...`,
     answers: [
       {
@@ -144,7 +144,7 @@ const questions = [
   // AXIS 4: G vs. H
   {
     axis: 3,
-    gif: "assets/GS.GIF",
+    gif: "assets/GS.gif",
     story: `Fuuuuu — You've been caught stealing by the master of the house himself! You attempt to de-escalate by...`,
     answers: [
       {
@@ -159,7 +159,7 @@ const questions = [
   },
   {
     axis: 3,
-    gif: "assets/Fight.GIF",
+    gif: "assets/Fight.gif",
     story: `He threatens to stomp you like a gnome! You take your trusty blade and swing at...`,
     answers: [
       {
@@ -174,7 +174,7 @@ const questions = [
   },
   {
     axis: 3,
-    gif: "assets/Dance.GIF",
+    gif: "assets/Dance.gif",
     story: `No! GNOME-STOMPER's sick moves overwhelm you. With gasping breath you say...`,
     answers: [
       {
