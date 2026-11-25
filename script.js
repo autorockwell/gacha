@@ -3,7 +3,7 @@ const questions = [
   // AXIS 1: A vs. B
   {
     axis: 0,
-    gif: "assets/Desert_Planet.GIF",
+    video: "assets/Desert_Planet.mp4",
     story: `You spawn into a desert planet. Everything looks beige and endless under the weak sun. Oh well, it's been an okay li — Wait! You see two flickers off in the distance. You decide to...`,
     answers: [
       {
@@ -18,7 +18,7 @@ const questions = [
   },
   {
     axis: 0,
-    gif: "assets/Two_Creatures.GIF",
+    video: "assets/Two_Creatures.mp4",
     story: `It's just your luck! You've come across an oasis. The creatures at this watering hole are strange. Something licks the back of your knee. No one licks the back of your knee (for free). You look down in indignation at...`,
     answers: [
       {
@@ -33,7 +33,7 @@ const questions = [
   },
   {
     axis: 0,
-    gif: "assets/Cranes.GIF",
+    video: "assets/Cranes.mp4",
     story: `A flock of cranes rushes behind you, dunking you into the water. In another twist of fate, you seem to have fallen through a wormhole. Your bag slips out of your hands, and you can only save one item on your descent. You reach for...`,
     answers: [
       {
@@ -50,7 +50,7 @@ const questions = [
   // AXIS 2: C vs. D
   {
     axis: 1,
-    gif: "assets/Meadow.GIF",
+    video: "assets/Meadow.mp4",
     story: `You land in a meadow. It's just like the laundry detergent commercials. The birds are singing, the clouds are billowing, the flowers are blooming. But you can't tune out the yelling of two very angry gnomes. You walk over to them...`,
     answers: [
       {
@@ -65,7 +65,7 @@ const questions = [
   },
   {
     axis: 1,
-    gif: "assets/Swords.GIF",
+    video: "assets/Swords.mp4",
     story: `It's been three hours. Gnomian politics are more complicated than you could have ever imagined, but most problems seem to derive from the dark overlord GNOME-STOMPER. Your companions inform you that the ruthless tyrant reaps the lands of their grain, controls the railways, and — among other things — stomps gnomes. They offer you their armory, and you choose to wield...`,
     answers: [
       {
@@ -80,7 +80,7 @@ const questions = [
   },
   {
     axis: 1,
-    gif: "assets/Faire.gif",
+    video: "assets/Faire.mp4",
     story: `You're on your merry way when your stomach starts rumbling. You take a detour to the nearby faire. It all smells so good, but you opt for...`,
     answers: [
       {
@@ -97,7 +97,7 @@ const questions = [
   // AXIS 3: E vs. F
   {
     axis: 2,
-    gif: "assets/Lair.gif",
+    video: "assets/Lair.mp4",
     story: `The volcanic lair is not very accessible. To make the rest of the way you...`,
     answers: [
       {
@@ -112,7 +112,7 @@ const questions = [
   },
   {
     axis: 2,
-    gif: "assets/Eyes.GIF",
+    video: "assets/Eyes.mp4",
     story: `Heavy is the door to this wretched den. Suspicious eyes peer at you through a slit. They demand to know who you are. You introduce yourself as...`,
     answers: [
       {
@@ -127,7 +127,7 @@ const questions = [
   },
   {
     axis: 2,
-    gif: "assets/Souvenir.gif",
+    video: "assets/Souvenir.mp4",
     story: `By George! That worked. The austere halls are lifeless. But, souvenirs or it didn't happen. A comfortable guy like GNOME-STOMPER surely wouldn't miss...`,
     answers: [
       {
@@ -144,7 +144,7 @@ const questions = [
   // AXIS 4: G vs. H
   {
     axis: 3,
-    gif: "assets/GS.gif",
+    video: "assets/GS.mp4",
     story: `Fuuuuu — You've been caught stealing by the master of the house himself! You attempt to de-escalate by...`,
     answers: [
       {
@@ -159,7 +159,7 @@ const questions = [
   },
   {
     axis: 3,
-    gif: "assets/Fight.gif",
+    video: "assets/Fight.mp4",
     story: `He threatens to stomp you like a gnome! You take your trusty blade and swing at...`,
     answers: [
       {
@@ -174,7 +174,7 @@ const questions = [
   },
   {
     axis: 3,
-    gif: "assets/Dance.gif",
+    video: "assets/Dance.mp4",
     story: `No! GNOME-STOMPER's sick moves overwhelm you. With gasping breath you say...`,
     answers: [
       {
@@ -395,10 +395,14 @@ function showScreen(screen) {
 document.getElementById("startBtn").addEventListener("click", () => {
   const name = document.getElementById("username").value.trim();
 
+  const nameError = document.getElementById("nameError");
+
   if (!name) {
-    alert("Please enter your name first.");
-    return;
+      nameError.textContent = "Ahem! Your name?";
+      return;
   }
+
+  nameError.textContent = "";
 
   playerName = name;
   currentQuestion = 0;
@@ -413,13 +417,24 @@ document.getElementById("startBtn").addEventListener("click", () => {
   );
 });
 
+document.getElementById("username").addEventListener("input", () => {
+  document.getElementById("nameError").textContent = "";
+});
+
 
 // RENDER QUESTION
 
 function renderQuestion() {
   const question = questions[currentQuestion];
 
-  document.getElementById("questionGif").src = question.gif;
+  const questionVideo = document.getElementById("questionVideo");
+
+  questionVideo.src = question.video;
+  questionVideo.load();
+
+  questionVideo.play().catch(error => {
+     console.log("Video playback could not start:", error);
+  });
 
   document.getElementById("questionNumber").textContent =
     `QUESTION ${currentQuestion + 1} / ${questions.length}`;
@@ -561,6 +576,11 @@ function calculateResult() {
 // RESTART
 
 document.getElementById("restartBtn").addEventListener("click", () => {
+  const downloadBtn = document.getElementById("downloadBtn");
+
+  downloadBtn.textContent = "Collect your talisman.";
+  downloadBtn.disabled = false;
+  downloadBtn.classList.remove("exchanged");
   selectedAnswers = [];
   currentQuestion = 0;
 
